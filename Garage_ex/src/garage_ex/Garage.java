@@ -10,20 +10,22 @@ public class Garage {
 		System.out.println("New Vehicle added: " + vehicle6.getName());
 	}
 	
-	public void removefromgarage(Vehicle vehicle6) {
-		int ID = vehicle6.getID();
-		garage1.remove(ID);
+	public void removefromgarage(int ID, Vehicle vehicle6) {
+		
+		if (ID == vehicle6.getID()) {
+			System.out.println("Vehicle removed:" + vehicle6.getName());
+			garage1.remove(ID);
+		}
+		else {
+			System.out.println("ID (" + ID + ") entered does not match Vehicle ID (" + vehicle6.getID() + ")");
+		}
+		
 	}
 	
-	public void billcalculator() {
+	public void billcalculator(Vehicle vehicle7) {
 	
-		for (Vehicle vehicle7 : garage1) {
 			System.out.println("Bill: " + vehicle7.bill());
-		}
-
 			
-
-
-}
+	}
 	
 }
