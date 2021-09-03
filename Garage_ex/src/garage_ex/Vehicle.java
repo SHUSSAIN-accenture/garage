@@ -1,11 +1,10 @@
 package garage_ex;
 
-public class Vehicle {
+public abstract class Vehicle {
 
-	public String name;
-	public String Vtype;
-	public int year;
-	public boolean FWD;
+	private String name;
+	private int year;
+	private boolean FWD;
 	
 	public int ID;
 
@@ -50,5 +49,5 @@ public class Vehicle {
 	}
 	
 	
-
+	public abstract float bill();
 }
